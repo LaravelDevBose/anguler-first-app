@@ -1,8 +1,13 @@
 
 
 <div class="container">
-  <button class="btn btn-info" [disabled]="!allowNewServer">Add Server</button>
-  <p [innerText]="allowNewServer"></p>
+  <button
+    class="btn btn-info"
+    [disabled]="!allowNewServer"
+    (click)="onServerCreated()"
+  >Add Server</button>
+<!--  <p [innerText]="allowNewServer"></p>-->
+  <p>{{ serverCreationStatus }}</p>
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
