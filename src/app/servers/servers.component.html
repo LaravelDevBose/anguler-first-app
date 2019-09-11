@@ -29,8 +29,6 @@
   </ng-template>
 <!--  end condition-->
 
-  <app-server></app-server>
-  <app-server></app-server>
-  <app-server></app-server>
+  <app-server *ngFor="let server of servers; let i= index"></app-server>
 </div>
 
