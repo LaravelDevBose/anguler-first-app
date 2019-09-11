@@ -19,7 +19,16 @@
     (click)="onServerCreated()"
   >Add Server</button>
 <!--  <p [innerText]="allowNewServer"></p>-->
-  <p>{{ serverCreationStatus }}</p>
+<!--  <p>{{ serverCreationStatus }}</p>-->
+<!--  <p *ngIf="serverCreated"> Server is Created, Server Name is {{ serverName}}</p> &lt;!&ndash;only if condication&ndash;&gt;-->
+
+<!--  if else condition-->
+  <p *ngIf="serverCreated; else notCreated"> Server is Created, Server Name is {{ serverName}}</p>
+  <ng-template #notCreated>
+    <p>No Server Created.</p>
+  </ng-template>
+<!--  end condition-->
+
   <app-server></app-server>
   <app-server></app-server>
   <app-server></app-server>
