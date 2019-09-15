@@ -5,12 +5,17 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {ServerComponent} from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import {PersonsComponent} from './persons/persons.component';
+import {PersonInputComponent} from './persons/person-input.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    PersonsComponent,
+    PersonInputComponent,
   ],
   imports: [
     BrowserModule,
