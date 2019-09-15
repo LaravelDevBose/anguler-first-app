@@ -1,4 +1,5 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
+import {PersonsService} from './persons.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,11 +8,13 @@ import {Component, Output, EventEmitter} from '@angular/core';
 })
 
 export class PersonInputComponent {
-  @Output() personCreate = new EventEmitter <string>();
   personName = '';
+  constructor(private perService: PersonsService) {
+
+  }
   addPerson() {
     console.log('person Created : ' + this.personName);
-    this.personCreate.emit(this.personName);
+    this.perService.personCreate(this.personName);
     this.personName = '';
   }
 }
