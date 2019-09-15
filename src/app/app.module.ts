@@ -8,6 +8,7 @@ import {ServerComponent} from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import {PersonsComponent} from './persons/persons.component';
 import {PersonInputComponent} from './persons/person-input.component';
+import {AppRoutingModule} from './app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {PersonInputComponent} from './persons/person-input.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
