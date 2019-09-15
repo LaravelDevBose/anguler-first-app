@@ -1,8 +1,8 @@
 
 <div class="container">
   <h3>Add Person Name</h3>
-  <input type="text" id="name" #personNameEl>
+  <input type="text" id="name"  [(ngModel)]="personName">
   <br>
-  <button type="button" (click)="addPerson(personNameEl.value)" class="btn btn-success">Add person</button>
+  <button type="button" (click)="addPerson()" class="btn btn-success">Add person</button>
 </div>
 

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,8 +7,12 @@ import {Component} from '@angular/core';
 })
 
 export class PersonInputComponent {
-  addPerson(personName: string) {
-    console.log('person Created : ' + personName);
+  @Output() personCreate = new EventEmitter <string>();
+  personName = '';
+  addPerson() {
+    console.log('person Created : ' + this.personName);
+    this.personCreate.emit(this.personName);
+    this.personName = '';
   }
 }
 

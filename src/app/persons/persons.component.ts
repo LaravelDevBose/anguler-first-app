@@ -8,4 +8,7 @@ import {Component} from '@angular/core';
 export class PersonsComponent {
     personList = ['Arup', 'Joy', 'Shuvo'];
     constructor() {}
+    onPersonCreate(personName: string) {
+      this.personList.push(personName);
+    }
 }
